@@ -15,7 +15,7 @@ const questions=[
 ["What does API stand for?",["Application Programming Interface","Advanced Program Internet","Application Process Input","Applied Programming Instruction"],0],
 ["Next number: 1,1,2,3,5,?",["6","7","8","10"],2]
 ];
-app.use(express.static(__dirname+"/public"));
+app.use(express.static(__dirname));
 app.get("/health",(q,r)=>r.json({ok:true}));
 function name(x){return String(x||"Player").replace(/[<>]/g,"").trim().slice(0,18)||"Player"}
 function code(){let s="";do{s=Array.from({length:5},()=> "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[Math.floor(Math.random()*32)]).join("")}while(rooms.has(s));return s}
